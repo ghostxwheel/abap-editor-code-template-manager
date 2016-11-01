@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nugget name="ZABAP_CODE_TEMPLATES">
+ <PROG NAME="ZABAP_CODE_TEMPLATES" VARCL="X" SUBC="1" RMAND="001" RLOAD="E" FIXPT="X" UCCHECK="X">
+  <textPool>
+   <language SPRAS="E">
+    <textElement ID="R" ENTRY="ABAP New Editor Code Template Manager" LENGTH="37 "/>
+   </language>
+  </textPool>
+  <dynpros>
+   <dynpro PROG="ZABAP_CODE_TEMPLATES" DNUM="0100" FNUM="0100" BZMX="24 " BZBR="105 " MILI="192 " MICO="37 " MALI="0 " MACO="0 " NOLI="27 " NOCO="120 " VALP="0 " CUAN="G" SPRA="E" DTEXT="0100">
+    <dynprofield FNAM="TXT_KEY" DIDX="0000" FLG1="00" FLG2="00" FLG3="00" FMB1="30" FMB2="00" LENG="0C" LINE="01" COLN="03" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" ITYP="0" AGLT="00" ADEZ="00" STXT="Key" RES1="                                                                                                                                                                                                                                                        X"/>
+    <dynprofield FNAM="GV_KEY" DIDX="0000" FLG1="80" FLG2="02" FLG3="80" FMB1="00" FMB2="00" LENG="10" LINE="01" COLN="10" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" GRP1="002" ITYP="C" AGLT="00" ADEZ="00" STXT="________________"/>
+    <dynprofield FNAM="TXT_DESCR" DIDX="0000" FLG1="00" FLG2="00" FLG3="00" FMB1="30" FMB2="00" LENG="0C" LINE="02" COLN="03" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" ITYP="0" AGLT="00" ADEZ="00" STXT="Description" RES1="                                                                                                                                                                                                                                                        X"/>
+    <dynprofield FNAM="GV_DESCR" DIDX="0000" FLG1="80" FLG2="02" FLG3="80" FMB1="00" FMB2="00" LENG="29" LINE="02" COLN="10" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" GRP1="001" ITYP="C" AGLT="00" ADEZ="00" STXT="_________________________________________"/>
+    <dynprofield FNAM="CONTAINER_TEXT" DIDX="0015" FLG1="00" FLG2="00" FLG3="00" FILL="U" FMB1="30" FMB2="00" LENG="68" LINE="04" COLN="03" LANF="00" LBLK="00" LREP="00" AUTH="101" AGLT="01" ADEZ="01"/>
+    <dynprofield FNAM="GV_OK_CODE" DIDX="0000" FLG1="80" FLG2="10" FLG3="00" FMB1="00" FMB2="00" LENG="14" LINE="FF" COLN="01" LTYP="O" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" AGLT="00" ADEZ="00" STXT="____________________"/>
+    <dynproflowsource>PROCESS BEFORE OUTPUT.
+  MODULE status_0100.
+
+PROCESS AFTER INPUT.
+  MODULE user_command_0100.</dynproflowsource>
+   </dynpro>
+  </dynpros>
+  <pfstatus>
+   <pfstatus_sta CODE="S0100" MODAL="D" ACTCODE="000002" PFKCODE="000002" BUTCODE="0001" INT_NOTE="Status 0100"/>
+   <pfstatus_sta CODE="SALV_STANDARD" MODAL="D" ACTCODE="000001" PFKCODE="000001" BUTCODE="0001" INT_NOTE="Standard for General List Output in Fullscreen Grid"/>
+   <pfstatus_fun CODE="%ADD" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_CREATE" ICON_ID="@0Y@" FUN_TEXT="Add template"/>
+   <pfstatus_fun CODE="%CHNG" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_CHANGE" ICON_ID="@0Z@" FUN_TEXT="Change template"/>
+   <pfstatus_fun CODE="%DEL" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_DELETE" ICON_ID="@11@" FUN_TEXT="Delete template"/>
+   <pfstatus_fun CODE="%DISP" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_DISPLAY" ICON_ID="@10@" FUN_TEXT="Display template"/>
+   <pfstatus_fun CODE="%ML" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Session" PATH="S"/>
+   <pfstatus_fun CODE="%PC" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_EXPORT" ICON_ID="@49@" FUN_TEXT="Local File..." PATH="L"/>
+   <pfstatus_fun CODE="%REFR" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_REFRESH" ICON_ID="@42@" FUN_TEXT="Refresh data"/>
+   <pfstatus_fun CODE="%SAVE" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SYSTEM_SAVE" ICON_ID="@2L@" FUN_TEXT="Save"/>
+   <pfstatus_fun CODE="%SC" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SEARCH" ICON_ID="@13@" FUN_TEXT="Search" PATH="E"/>
+   <pfstatus_fun CODE="%SC+" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SEARCH_NEXT" ICON_ID="@4E@" FUN_TEXT="Find Next"/>
+   <pfstatus_fun CODE="%SL" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_MAIL" ICON_ID="@1S@" FUN_TEXT="Mail Recipient" PATH="M"/>
+   <pfstatus_fun CODE="&amp;ABC" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_ABC" ICON_ID="@DL@" FUN_TEXT="ABC Analysis" PATH="A"/>
+   <pfstatus_fun CODE="&amp;ALL" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SELECT_ALL" ICON_ID="@4B@" FUN_TEXT="Select All" PATH="S"/>
+   <pfstatus_fun CODE="&amp;AQW" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_WORD_PROCESSING" ICON_ID="@DK@" FUN_TEXT="Word Processing..." PATH="W"/>
+   <pfstatus_fun CODE="&amp;AUF" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Define Totals Drilldown..." PATH="S"/>
+   <pfstatus_fun CODE="&amp;AVE" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Saving..." PATH="S"/>
+   <pfstatus_fun CODE="&amp;AVE" TEXTNO="002" TEXT_TYPE="S" TEXT_NAME="ICON_ALV_VARIANT_SAVE" ICON_ID="@DN@" FUN_TEXT="Save Layout..."/>
+   <pfstatus_fun CODE="&amp;AVR" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Mean Value" PATH="M"/>
+   <pfstatus_fun CODE="&amp;CDF" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Unfreeze Columns" PATH="U"/>
+   <pfstatus_fun CODE="&amp;CFI" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Freeze to Column" PATH="F"/>
+   <pfstatus_fun CODE="&amp;COUNT" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Count" PATH="C"/>
+   <pfstatus_fun CODE="&amp;CRB" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_TOTAL_LEFT" ICON_ID="@0B@" FUN_TEXT="First Column"/>
+   <pfstatus_fun CODE="&amp;CRDESIG" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Crystal Reports Designer" PATH="C"/>
+   <pfstatus_fun CODE="&amp;CRE" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_TOTAL_RIGHT" ICON_ID="@0C@" FUN_TEXT="Last Column"/>
+   <pfstatus_fun CODE="&amp;CRL" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_COLUMN_LEFT" ICON_ID="@0D@" FUN_TEXT="Column Left"/>
+   <pfstatus_fun CODE="&amp;CRR" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_COLUMN_RIGHT" ICON_ID="@0E@" FUN_TEXT="Column Right"/>
+   <pfstatus_fun CODE="&amp;EB9" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_TABLE_SETTINGS" ICON_ID="@36@" FUN_TEXT="Call Up Report..." PATH="B"/>
+   <pfstatus_fun CODE="&amp;ELP" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SYSTEM_HELP" ICON_ID="@35@" FUN_TEXT="Help"/>
+   <pfstatus_fun CODE="&amp;ERW" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Administration..." PATH="A"/>
+   <pfstatus_fun CODE="&amp;ETA" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SELECT_DETAIL" ICON_ID="@16@" FUN_TEXT="Details"/>
+   <pfstatus_fun CODE="&amp;F03" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Back" PATH="B"/>
+   <pfstatus_fun CODE="&amp;F12" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_CANCEL" ICON_ID="@0W@" FUN_TEXT="Cancel" PATH="A"/>
+   <pfstatus_fun CODE="&amp;F15" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Exit" PATH="X"/>
+   <pfstatus_fun CODE="&amp;F4" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Possible Entries"/>
+   <pfstatus_fun CODE="&amp;GRAPH" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_GRAPHICS" ICON_ID="@0N@" FUN_TEXT="Graphic" PATH="G"/>
+   <pfstatus_fun CODE="&amp;IC1" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SELECT_DETAIL" ICON_ID="@16@" FUN_TEXT="Choose"/>
+   <pfstatus_fun CODE="&amp;ILD" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Delete Filter" PATH="L"/>
+   <pfstatus_fun CODE="&amp;ILT" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_FILTER" ICON_ID="@4G@" FUN_TEXT="Set Filter" PATH="F"/>
+   <pfstatus_fun CODE="&amp;INFO" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_INFORMATION" ICON_ID="@0S@" FUN_TEXT="Information"/>
+   <pfstatus_fun CODE="&amp;MAX" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Maximum" PATH="A"/>
+   <pfstatus_fun CODE="&amp;MIN" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Minimum" PATH="I"/>
+   <pfstatus_fun CODE="&amp;OAD" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Choose..." PATH="H"/>
+   <pfstatus_fun CODE="&amp;OAD" TEXTNO="002" TEXT_TYPE="S" TEXT_NAME="ICON_ALV_VARIANT_CHOOSE" ICON_ID="@DM@" FUN_TEXT="Select Layout"/>
+   <pfstatus_fun CODE="&amp;ODN" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SORT_DOWN" ICON_ID="@3F@" FUN_TEXT="Sort in Descending Order" PATH="O"/>
+   <pfstatus_fun CODE="&amp;OL0" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_ALV_VARIANTS" ICON_ID="@LZ@" FUN_TEXT="Change Layout..."/>
+   <pfstatus_fun CODE="&amp;OLX" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_VARIANTS" ICON_ID="@0R@" FUN_TEXT="Change..." PATH="C"/>
+   <pfstatus_fun CODE="&amp;OPT" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Optimize Width" PATH="P"/>
+   <pfstatus_fun CODE="&amp;OUP" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SORT_UP" ICON_ID="@3E@" FUN_TEXT="Sort in Ascending Order" PATH="I"/>
+   <pfstatus_fun CODE="&amp;RNT" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_PRINT" ICON_ID="@0X@" FUN_TEXT="Print" PATH="P"/>
+   <pfstatus_fun CODE="&amp;RNT_PREV" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_LAYOUT_CONTROL" ICON_ID="@3G@" FUN_TEXT="Print Preview" PATH="R"/>
+   <pfstatus_fun CODE="&amp;SAL" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_DESELECT_ALL" ICON_ID="@4D@" FUN_TEXT="Deselect All" PATH="D"/>
+   <pfstatus_fun CODE="&amp;SUM" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_INTERMEDIATE_SUM" ICON_ID="@5V@" FUN_TEXT="Subtotals" PATH="T"/>
+   <pfstatus_fun CODE="&amp;UMC" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SUM" ICON_ID="@3Z@" FUN_TEXT="Total" PATH="T"/>
+   <pfstatus_fun CODE="&amp;VCRYSTAL" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_REPORT_TEMPLATE" ICON_ID="@QH@" FUN_TEXT="Crystal Reports" PATH="C"/>
+   <pfstatus_fun CODE="&amp;VCRYSTRAL" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_REPORT_TEMPLATE" ICON_ID="@QH@" FUN_TEXT="Crystal Reports Designer"/>
+   <pfstatus_fun CODE="&amp;VEXCEL" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_XLS" ICON_ID="@J2@" FUN_TEXT="Microsoft Excel" PATH="M"/>
+   <pfstatus_fun CODE="&amp;VGRID" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_LIST" ICON_ID="@3W@" FUN_TEXT="SAP List Viewer" PATH="S"/>
+   <pfstatus_fun CODE="&amp;VLOTUS" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_LOTUS" ICON_ID="@JD@" FUN_TEXT="Lotus 1-2-3" PATH="L"/>
+   <pfstatus_fun CODE="&amp;XXL" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_XXL" ICON_ID="@DJ@" FUN_TEXT="Spreadsheet..." PATH="A"/>
+   <pfstatus_fun CODE="ALLS" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_EXPAND" ICON_ID="@3S@" FUN_TEXT="All Selections" PATH="L"/>
+   <pfstatus_fun CODE="DELA" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_DELETE" ICON_ID="@11@" FUN_TEXT="Delete All Selections" PATH="E"/>
+   <pfstatus_fun CODE="DELS" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_DELETE_ROW" ICON_ID="@18@" FUN_TEXT="Delete Selection Row" PATH="S"/>
+   <pfstatus_fun CODE="DOCU" TEXTNO="001" TYPE="H" TEXT_TYPE="S" TEXT_NAME="ICON_INFORMATION" ICON_ID="@0S@" FUN_TEXT="Program Documentation"/>
+   <pfstatus_fun CODE="DYNS" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Dynamic Selections" PATH="D"/>
+   <pfstatus_fun CODE="DYNS" TEXTNO="002" TEXT_TYPE="D" TEXT_NAME="SSCRTEXTS-DYNSEL"/>
+   <pfstatus_fun CODE="E" TEXTNO="001" TYPE="E" TEXT_TYPE="S" FUN_TEXT="Back" PATH="B"/>
+   <pfstatus_fun CODE="ECAN" TEXTNO="001" TYPE="E" TEXT_TYPE="S" FUN_TEXT="Cancel" PATH="A"/>
+   <pfstatus_fun CODE="ENDE" TEXTNO="001" TYPE="E" TEXT_TYPE="S" FUN_TEXT="Exit" PATH="X"/>
+   <pfstatus_fun CODE="FC01" TEXTNO="001" TEXT_TYPE="D" TEXT_NAME="SSCRFIELDS-FUNCTXT_01"/>
+   <pfstatus_fun CODE="FC02" TEXTNO="001" TEXT_TYPE="D" TEXT_NAME="SSCRFIELDS-FUNCTXT_02"/>
+   <pfstatus_fun CODE="FC03" TEXTNO="001" TEXT_TYPE="D" TEXT_NAME="SSCRFIELDS-FUNCTXT_03"/>
+   <pfstatus_fun CODE="FC04" TEXTNO="001" TEXT_TYPE="D" TEXT_NAME="SSCRFIELDS-FUNCTXT_04"/>
+   <pfstatus_fun CODE="FC05" TEXTNO="001" TEXT_TYPE="D" TEXT_NAME="SSCRFIELDS-FUNCTXT_05"/>
+   <pfstatus_fun CODE="FEWS" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_COLLAPSE" ICON_ID="@3T@" FUN_TEXT="Chosen Selections" PATH="C"/>
+   <pfstatus_fun CODE="GET" TEXTNO="001" TYPE="E" TEXT_TYPE="S" FUN_TEXT="Get..." PATH="G"/>
+   <pfstatus_fun CODE="GET" TEXTNO="002" TYPE="E" TEXT_TYPE="S" TEXT_NAME="ICON_VARIANTS" ICON_ID="@0R@" FUN_TEXT="Get Variant..." PATH="V"/>
+   <pfstatus_fun CODE="GET_SEL" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Display Selections"/>
+   <pfstatus_fun CODE="LVUV" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="User Variables..." PATH="U"/>
+   <pfstatus_fun CODE="ONLI" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_EXECUTE_OBJECT" ICON_ID="@15@" FUN_TEXT="Execute" PATH="E"/>
+   <pfstatus_fun CODE="OPTI" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SELECTION" ICON_ID="@7X@" FUN_TEXT="Selection Options" PATH="O"/>
+   <pfstatus_fun CODE="PRIN" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_PRINT" ICON_ID="@0X@" FUN_TEXT="Execute and Print" PATH="U"/>
+   <pfstatus_fun CODE="PRIN" TEXTNO="002" TEXT_TYPE="S" FUN_TEXT="Execute and Print" PATH="U"/>
+   <pfstatus_fun CODE="SCRH" TEXTNO="001" TYPE="E" TEXT_TYPE="S" TEXT_NAME="ICON_INFORMATION" ICON_ID="@0S@" FUN_TEXT="Selection Screen Help" PATH="H"/>
+   <pfstatus_fun CODE="SET_CELL" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Current Cell"/>
+   <pfstatus_fun CODE="SET_COLS" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Columns"/>
+   <pfstatus_fun CODE="SET_ROWS" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Rows"/>
+   <pfstatus_fun CODE="SJOB" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Execute in Background" PATH="I"/>
+   <pfstatus_fun CODE="SPOS" TEXTNO="001" TEXT_TYPE="S" TEXT_NAME="ICON_SYSTEM_SAVE" ICON_ID="@2L@" FUN_TEXT="Save as Variant..." INFO_TEXT="Save as variant" PATH="S"/>
+   <pfstatus_fun CODE="VDEL" TEXTNO="001" TEXT_TYPE="S" FUN_TEXT="Delete..." PATH="D"/>
+   <pfstatus_fun CODE="VSHO" TEXTNO="001" TYPE="E" TEXT_TYPE="S" FUN_TEXT="Display..." PATH="A"/>
+   <pfstatus_men CODE="000001" NO="01" REF_TYPE="F" REF_CODE="&amp;RNT_PREV" REF_NO="001"/>
+   <pfstatus_men CODE="000001" NO="02" REF_TYPE="F" REF_CODE="&amp;RNT" REF_NO="001"/>
+   <pfstatus_men CODE="000001" NO="03" REF_TYPE="S"/>
+   <pfstatus_men CODE="000001" NO="04" REF_TYPE="M" REF_CODE="000002"/>
+   <pfstatus_men CODE="000001" NO="05" REF_TYPE="M" REF_CODE="000003"/>
+   <pfstatus_men CODE="000001" NO="06" REF_TYPE="S"/>
+   <pfstatus_men CODE="000001" NO="07" REF_TYPE="F" REF_CODE="&amp;F15" REF_NO="001"/>
+   <pfstatus_men CODE="000002" NO="01" REF_TYPE="F" REF_CODE="&amp;AQW" REF_NO="001"/>
+   <pfstatus_men CODE="000002" NO="02" REF_TYPE="F" REF_CODE="&amp;XXL" REF_NO="001"/>
+   <pfstatus_men CODE="000002" NO="03" REF_TYPE="F" REF_CODE="%PC" REF_NO="001"/>
+   <pfstatus_men CODE="000003" NO="01" REF_TYPE="F" REF_CODE="%SL" REF_NO="001"/>
+   <pfstatus_men CODE="000003" NO="02" REF_TYPE="F" REF_CODE="%ML" REF_NO="001"/>
+   <pfstatus_men CODE="000004" NO="01" REF_TYPE="F" REF_CODE="&amp;ALL" REF_NO="001"/>
+   <pfstatus_men CODE="000004" NO="02" REF_TYPE="F" REF_CODE="&amp;SAL" REF_NO="001"/>
+   <pfstatus_men CODE="000004" NO="03" REF_TYPE="S"/>
+   <pfstatus_men CODE="000004" NO="04" REF_TYPE="F" REF_CODE="&amp;ILT" REF_NO="001"/>
+   <pfstatus_men CODE="000004" NO="05" REF_TYPE="F" REF_CODE="&amp;ILD" REF_NO="001"/>
+   <pfstatus_men CODE="000004" NO="06" REF_TYPE="S"/>
+   <pfstatus_men CODE="000004" NO="07" REF_TYPE="F" REF_CODE="&amp;OUP" REF_NO="001"/>
+   <pfstatus_men CODE="000004" NO="08" REF_TYPE="F" REF_CODE="&amp;ODN" REF_NO="001"/>
+   <pfstatus_men CODE="000004" NO="09" REF_TYPE="S"/>
+   <pfstatus_men CODE="000004" NO="10" REF_TYPE="M" REF_CODE="000005"/>
+   <pfstatus_men CODE="000004" NO="11" REF_TYPE="F" REF_CODE="&amp;SUM" REF_NO="001"/>
+   <pfstatus_men CODE="000004" NO="12" REF_TYPE="S"/>
+   <pfstatus_men CODE="000004" NO="13" REF_TYPE="F" REF_CODE="%SC" REF_NO="001"/>
+   <pfstatus_men CODE="000004" NO="14" REF_TYPE="S"/>
+   <pfstatus_men CODE="000004" NO="15" REF_TYPE="F" REF_CODE="&amp;F12" REF_NO="001"/>
+   <pfstatus_men CODE="000005" NO="01" REF_TYPE="F" REF_CODE="&amp;UMC" REF_NO="001"/>
+   <pfstatus_men CODE="000005" NO="02" REF_TYPE="F" REF_CODE="&amp;AVR" REF_NO="001"/>
+   <pfstatus_men CODE="000005" NO="03" REF_TYPE="F" REF_CODE="&amp;MIN" REF_NO="001"/>
+   <pfstatus_men CODE="000005" NO="04" REF_TYPE="F" REF_CODE="&amp;MAX" REF_NO="001"/>
+   <pfstatus_men CODE="000005" NO="05" REF_TYPE="F" REF_CODE="&amp;COUNT" REF_NO="001"/>
+   <pfstatus_men CODE="000006" NO="01" REF_TYPE="F" REF_CODE="&amp;F03" REF_NO="001"/>
+   <pfstatus_men CODE="000007" NO="01" REF_TYPE="M" REF_CODE="000008"/>
+   <pfstatus_men CODE="000007" NO="02" REF_TYPE="M" REF_CODE="000009"/>
+   <pfstatus_men CODE="000007" NO="03" REF_TYPE="F" REF_CODE="&amp;AUF" REF_NO="001"/>
+   <pfstatus_men CODE="000008" NO="01" REF_TYPE="F" REF_CODE="&amp;OLX" REF_NO="001"/>
+   <pfstatus_men CODE="000008" NO="02" REF_TYPE="F" REF_CODE="&amp;OAD" REF_NO="001"/>
+   <pfstatus_men CODE="000008" NO="03" REF_TYPE="S"/>
+   <pfstatus_men CODE="000008" NO="04" REF_TYPE="F" REF_CODE="&amp;AVE" REF_NO="001"/>
+   <pfstatus_men CODE="000008" NO="05" REF_TYPE="S"/>
+   <pfstatus_men CODE="000008" NO="06" REF_TYPE="F" REF_CODE="&amp;ERW" REF_NO="001"/>
+   <pfstatus_men CODE="000009" NO="01" REF_TYPE="F" REF_CODE="&amp;OPT" REF_NO="001"/>
+   <pfstatus_men CODE="000009" NO="02" REF_TYPE="S"/>
+   <pfstatus_men CODE="000009" NO="03" REF_TYPE="F" REF_CODE="&amp;CFI" REF_NO="001"/>
+   <pfstatus_men CODE="000009" NO="04" REF_TYPE="F" REF_CODE="&amp;CDF" REF_NO="001"/>
+   <pfstatus_men CODE="000011" NO="01" REF_TYPE="F" REF_CODE="ALLS" REF_NO="001"/>
+   <pfstatus_men CODE="000011" NO="02" REF_TYPE="F" REF_CODE="FEWS" REF_NO="001"/>
+   <pfstatus_men CODE="000011" NO="03" REF_TYPE="S"/>
+   <pfstatus_men CODE="000011" NO="04" REF_TYPE="F" REF_CODE="OPTI" REF_NO="001"/>
+   <pfstatus_men CODE="000011" NO="05" REF_TYPE="S"/>
+   <pfstatus_men CODE="000011" NO="06" REF_TYPE="F" REF_CODE="DELS" REF_NO="001"/>
+   <pfstatus_men CODE="000011" NO="07" REF_TYPE="F" REF_CODE="DELA" REF_NO="001"/>
+   <pfstatus_men CODE="000011" NO="08" REF_TYPE="S"/>
+   <pfstatus_men CODE="000011" NO="09" REF_TYPE="F" REF_CODE="DYNS" REF_NO="001"/>
+   <pfstatus_men CODE="000011" NO="10" REF_TYPE="S"/>
+   <pfstatus_men CODE="000011" NO="11" REF_TYPE="F" REF_CODE="ECAN" REF_NO="001"/>
+   <pfstatus_men CODE="000012" NO="01" REF_TYPE="M" REF_CODE="000013"/>
+   <pfstatus_men CODE="000012" NO="02" REF_TYPE="S"/>
+   <pfstatus_men CODE="000012" NO="03" REF_TYPE="F" REF_CODE="LVUV" REF_NO="001"/>
+   <pfstatus_men CODE="000012" NO="04" REF_TYPE="S"/>
+   <pfstatus_men CODE="000012" NO="05" REF_TYPE="F" REF_CODE="SCRH" REF_NO="001"/>
+   <pfstatus_men CODE="000012" NO="06" REF_TYPE="S"/>
+   <pfstatus_men CODE="000012" NO="07" REF_TYPE="F" REF_CODE="E" REF_NO="001"/>
+   <pfstatus_men CODE="000013" NO="01" REF_TYPE="F" REF_CODE="GET" REF_NO="001"/>
+   <pfstatus_men CODE="000013" NO="02" REF_TYPE="F" REF_CODE="VSHO" REF_NO="001"/>
+   <pfstatus_men CODE="000013" NO="03" REF_TYPE="F" REF_CODE="VDEL" REF_NO="001"/>
+   <pfstatus_men CODE="000013" NO="04" REF_TYPE="F" REF_CODE="SPOS" REF_NO="001"/>
+   <pfstatus_mtx CODE="000001" TEXT_TYPE="S" TEXT="List" PATH="L" INT_NOTE="SALV_TABLE_STATUS List"/>
+   <pfstatus_mtx CODE="000002" TEXT_TYPE="S" TEXT="Export" PATH="E" INT_NOTE="STANDARD Save"/>
+   <pfstatus_mtx CODE="000003" TEXT_TYPE="S" TEXT="Send To" PATH="S"/>
+   <pfstatus_mtx CODE="000004" TEXT_TYPE="S" TEXT="Edit" PATH="E" INT_NOTE="STANDARD"/>
+   <pfstatus_mtx CODE="000005" TEXT_TYPE="S" TEXT="Calculate" PATH="C"/>
+   <pfstatus_mtx CODE="000006" TEXT_TYPE="S" TEXT="Goto" PATH="G" INT_NOTE="Standard Supplement"/>
+   <pfstatus_mtx CODE="000007" TEXT_TYPE="S" TEXT="Settings" PATH="S" INT_NOTE="SALV_TABLE_STATUS"/>
+   <pfstatus_mtx CODE="000008" TEXT_TYPE="S" TEXT="Layout" PATH="A" INT_NOTE="Sub STANDARD"/>
+   <pfstatus_mtx CODE="000009" TEXT_TYPE="S" TEXT="Columns" PATH="C"/>
+   <pfstatus_mtx CODE="000010" TEXT_TYPE="S" TEXT="Program" PATH="P" INT_NOTE="Standard Status"/>
+   <pfstatus_mtx CODE="000011" TEXT_TYPE="S" TEXT="Edit" PATH="E" INT_NOTE="Standard Status"/>
+   <pfstatus_mtx CODE="000012" TEXT_TYPE="S" TEXT="Goto" PATH="G" INT_NOTE="Standard Status and Job Scheduling (Errors)"/>
+   <pfstatus_mtx CODE="000013" TEXT_TYPE="S" TEXT="Variants" PATH="V" INT_NOTE="Go to variants"/>
+   <pfstatus_act CODE="000001" NO="01" MENUCODE="000001"/>
+   <pfstatus_act CODE="000001" NO="02" MENUCODE="000004"/>
+   <pfstatus_act CODE="000001" NO="03" MENUCODE="000006"/>
+   <pfstatus_act CODE="000001" NO="04" MENUCODE="000007"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="01" PFNO="39"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="02" PFNO="S"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="03" PFNO="05"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="04" PFNO="06"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="05" PFNO="S"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="06" PFNO="28"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="07" PFNO="40"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="08" PFNO="29"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="09" PFNO="S"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="10" PFNO="30"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="11" PFNO="42"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="12" PFNO="S"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="13" PFNO="46"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="14" PFNO="S"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="15" PFNO="32"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="16" PFNO="33"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="17" PFNO="34"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="18" PFNO="S"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="19" PFNO="13"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="20" PFNO="20"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="21" PFNO="22"/>
+   <pfstatus_but PFK_CODE="000001" CODE="0001" NO="22" PFNO="35"/>
+   <pfstatus_pfk CODE="000001" PFNO="01" FUNCODE="&amp;ELP" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="02" FUNCODE="&amp;IC1" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="03" FUNCODE="&amp;F03" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="04" FUNCODE="&amp;F4" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="05" FUNCODE="&amp;ALL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="06" FUNCODE="&amp;SAL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="07" FUNCODE="SET_CELL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="12" FUNCODE="&amp;F12" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="13" FUNCODE="%DISP" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="14" FUNCODE="SET_ROWS" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="15" FUNCODE="&amp;F15" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="16" FUNCODE="SET_COLS" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="17" FUNCODE="GET_SEL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="18" FUNCODE="&amp;CRB" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="19" FUNCODE="&amp;CRE" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="20" FUNCODE="%CHNG" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="21" FUNCODE="&amp;XXL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="22" FUNCODE="%ADD" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="23" FUNCODE="&amp;VCRYSTRAL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="24" FUNCODE="&amp;VCRYSTAL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="25" FUNCODE="&amp;ABC" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="26" FUNCODE="&amp;CRL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="27" FUNCODE="&amp;CRR" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="28" FUNCODE="&amp;OUP" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="29" FUNCODE="&amp;ILT" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="30" FUNCODE="&amp;UMC" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="31" FUNCODE="%SL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="32" FUNCODE="&amp;OL0" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="33" FUNCODE="&amp;OAD" FUNNO="002"/>
+   <pfstatus_pfk CODE="000001" PFNO="34" FUNCODE="&amp;AVE" FUNNO="002"/>
+   <pfstatus_pfk CODE="000001" PFNO="35" FUNCODE="%DEL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="36" FUNCODE="&amp;INFO" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="37" FUNCODE="&amp;EB9" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="38" FUNCODE="&amp;VLOTUS" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="39" FUNCODE="&amp;ETA" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="40" FUNCODE="&amp;ODN" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="41" FUNCODE="&amp;VGRID" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="42" FUNCODE="&amp;SUM" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="43" FUNCODE="&amp;VEXCEL" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="44" FUNCODE="&amp;AQW" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="45" FUNCODE="%PC" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="46" FUNCODE="&amp;RNT_PREV" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="47" FUNCODE="&amp;GRAPH" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="48" FUNCODE="&amp;CRDESIG" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="71" FUNCODE="%SC" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="84" FUNCODE="%SC+" FUNNO="001"/>
+   <pfstatus_pfk CODE="000001" PFNO="86" FUNCODE="&amp;RNT" FUNNO="001"/>
+   <pfstatus_pfk CODE="000002" PFNO="03" FUNCODE="E" FUNNO="001"/>
+   <pfstatus_pfk CODE="000002" PFNO="11" FUNCODE="%SAVE" FUNNO="001"/>
+   <pfstatus_pfk CODE="000002" PFNO="12" FUNCODE="ECAN" FUNNO="001"/>
+   <pfstatus_pfk CODE="000002" PFNO="15" FUNCODE="ENDE" FUNNO="001"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="%SAVE"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="ALLS"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="BUGA"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="BUGE"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="CANC"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="DELA"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="DELS"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="DYNS"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="E"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="ECAN"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="EGET"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="ENDE"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="FEWS"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="GET"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="LVUV"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="NONE"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="OPTI"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="PRIN"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="SCRH"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="SPOS"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="STKA"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="STKE"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="SVUV"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="VARI"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="VDEL"/>
+   <pfstatus_set STATUS="S0100" FUNCTION="VSHO"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%ADD"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%CH"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%CHNG"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%DEL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%DISP"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%ML"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%PC"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%REFR"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%SC"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%SC+"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="%SL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;ABC"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;ALL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;AQW"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;AUF"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;AVE"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;AVR"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;BS"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;BS+"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;BS-"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;CDF"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;CFI"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;COUNT"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;CRB"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;CRBATCH"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;CRDESIG"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;CRE"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;CRL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;CRR"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;CRYSTAL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;DATA_SAVE"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;DAU"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;DOF"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;DON"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;EB3"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;EB9"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;ELP"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;ERW"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;ETA"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;F03"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;F12"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;F15"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;F4"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;GRAPH"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;IC1"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;ILD"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;ILT"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;INFO"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;KOM"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;LFO"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;LIS"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;MAX"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;MIN"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;NFO"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;NTE"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;OAD"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;ODN"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;OL0"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;OLX"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;OMP"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;OPT"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;OUP"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;REFRESH"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;RNT"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;RNT_PREV"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;SAL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;SAVE"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;SUM"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;UMC"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;URL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;VCRYSTAL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;VCRYSTRAL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;VEXCEL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;VGRID"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;VLOTUS"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;XML"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;XPA"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="&amp;XXL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="BAC1"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="BACK"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="BEB1"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="BEB2"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="BEB3"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="BEB9"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="BEBN"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="COL0"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="COLX"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="DETA"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="DRUK"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="DSAL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="ENTE"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="EXIT"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="EXPA"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="FILD"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="FILT"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="GET_SEL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="GLIS"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="HELP"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="INFO"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="KOMP"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="P+"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="P++"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="P-"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="P--"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="PF09"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="PF13"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="PIC1"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="PICK"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="PRI"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="PRIN"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="PRNT"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="RW"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SALL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SAUF"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SAVE"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SCRB"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SCRE"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SCRL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SCRR"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SET_CELL"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SET_COLS"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SET_ROWS"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SKOM"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SODN"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SOUP"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="SUMC"/>
+   <pfstatus_set STATUS="SALV_STANDARD" FUNCTION="ZSUM"/>
+   <pfstatus_doc OBJ_TYPE="A" OBJ_CODE="000001" MODAL="D" INT_NOTE="Standard Interface              SALV_TABLE_STANDARD"/>
+   <pfstatus_doc OBJ_TYPE="P" OBJ_CODE="000001" MODAL="D" NORM="X" INT_NOTE="Standard Maximum Interaction SALV_TABLE_STANDARD"/>
+   <pfstatus_doc OBJ_TYPE="B" OBJ_CODE="000001" SUB_CODE="0001" INT_NOTE="SALV_TABLE_STANDARD"/>
+   <pfstatus_doc OBJ_TYPE="A" OBJ_CODE="000002" MODAL="D" INT_NOTE="Report start: standard status"/>
+   <pfstatus_doc OBJ_TYPE="P" OBJ_CODE="000002" MODAL="D" INT_NOTE="Standard Status"/>
+   <pfstatus_doc OBJ_TYPE="B" OBJ_CODE="000002" SUB_CODE="0001" MODAL="D" INT_NOTE="Standard Status"/>
+   <pfstatus_tit CODE="T0100" TEXT="ABAP New Editor Code Template Manager"/>
+  </pfstatus>
+  <source>*&amp;---------------------------------------------------------------------*
+*&amp; Report ZGRISH_ABAP_CODE_TEMPLATES
+*&amp;---------------------------------------------------------------------*
+*&amp;
+*&amp;---------------------------------------------------------------------*
+REPORT zabap_code_templates.
+
+CLASS lcl_report DEFINITION.
+  PUBLIC SECTION.
+    TYPES: BEGIN OF ts_template,
+             key         TYPE string,
+             description TYPE string,
+             text        TYPE string,
+           END OF ts_template.
+
+    METHODS start.
+
+    METHODS handle_xml_file
+      IMPORTING
+        iv_mode     TYPE string
+        is_template TYPE ts_template OPTIONAL.
+
+    METHODS load_data.
+
+    METHODS status_0100
+      CHANGING
+        cv_key   TYPE string
+        cv_descr TYPE string.
+    METHODS user_command_0100
+      CHANGING
+        cv_ok_code TYPE syucomm
+        cv_key     TYPE string
+        cv_descr   TYPE string.
+  PROTECTED SECTION.
+    METHODS user_command FOR EVENT added_function OF cl_salv_events_table
+      IMPORTING e_salv_function.
+
+    METHODS add_template
+      IMPORTING
+        iv_key   TYPE string
+        iv_descr TYPE string
+        iv_text  TYPE string.
+
+    METHODS update_template
+      IMPORTING
+        iv_key   TYPE string
+        iv_descr TYPE string
+        iv_text  TYPE string.
+
+    METHODS delete_template
+      IMPORTING
+        iv_key   TYPE string
+        iv_descr TYPE string
+        iv_text  TYPE string.
+
+    METHODS free_resources_0100.
+
+    DATA mt_templates TYPE STANDARD TABLE OF ts_template.
+    DATA mo_salv TYPE REF TO cl_salv_table.
+    DATA mv_screen_mode TYPE string.
+
+    DATA ms_selected_template TYPE ts_template.
+
+    DATA mo_abap_container TYPE REF TO cl_gui_custom_container.
+    DATA mo_abap_editor TYPE REF TO cl_gui_abapedit.
+
+ENDCLASS.
+
+CLASS lcl_report IMPLEMENTATION.
+  METHOD start.
+
+    me-&gt;load_data( ).
+
+    CHECK mt_templates IS NOT INITIAL.
+
+    DATA lo_err  TYPE REF TO cx_root.
+
+    TRY .
+
+        cl_salv_table=&gt;factory(
+          IMPORTING
+            r_salv_table   = mo_salv    &quot; Basis Class Simple ALV Tables
+          CHANGING
+            t_table        = mt_templates
+        ).
+
+        mo_salv-&gt;set_screen_status(
+          EXPORTING
+            report        = sy-repid    &quot; ABAP Program: Current Master Program
+            pfstatus      = &apos;SALV_STANDARD&apos;    &quot; Screens, Current GUI Status
+*         set_functions =     &quot; ALV: Data Element for Constants
+        ).
+
+        mo_salv-&gt;get_selections( )-&gt;set_selection_mode( value = if_salv_c_selection_mode=&gt;single ).
+        mo_salv-&gt;get_columns( )-&gt;set_optimize( &apos;X&apos; ).
+
+        DEFINE macro_set_column_text.
+
+          mo_salv-&gt;get_columns( )-&gt;get_column( &amp;1 )-&gt;set_medium_text( &amp;2 ).
+          mo_salv-&gt;get_columns( )-&gt;get_column( &amp;1 )-&gt;set_long_text( &amp;2 ).
+
+        END-OF-DEFINITION.
+
+        macro_set_column_text &apos;KEY&apos; `Key`.
+        macro_set_column_text &apos;DESCRIPTION&apos; `Description`.
+        macro_set_column_text &apos;TEXT&apos; `Template Text`.
+
+        SET HANDLER me-&gt;user_command FOR mo_salv-&gt;get_event( ).
+
+        mo_salv-&gt;display( ).
+
+      CATCH cx_salv_msg
+            cx_salv_not_found INTO lo_err.    &quot;  .
+        MESSAGE lo_err TYPE &apos;E&apos;.
+    ENDTRY.
+
+  ENDMETHOD.
+
+  METHOD handle_xml_file.
+
+    DATA: lv_app_data_path TYPE string.
+
+    DATA: lv_raw_data_len TYPE i.
+    DATA: lt_raw_data     TYPE STANDARD TABLE OF raw255.
+    DATA: lv_raw_data_x   TYPE xstring.
+
+    DATA: lo_ixml TYPE REF TO if_ixml.
+
+    DATA: lo_streamfactory TYPE REF TO if_ixml_stream_factory,
+          lo_istream       TYPE REF TO if_ixml_istream.
+
+    DATA: lo_document TYPE REF TO if_ixml_document,
+          lo_parser   TYPE REF TO if_ixml_parser.
+
+    DATA: lo_child       TYPE REF TO if_ixml_node.
+    DATA: lo_cloned_node TYPE REF TO if_ixml_node.
+
+    DATA: lo_node     TYPE REF TO if_ixml_node,
+          lo_nodemap  TYPE REF TO if_ixml_named_node_map,
+          lo_iterator TYPE REF TO if_ixml_node_iterator.
+
+    DATA: lv_name  TYPE string.
+    DATA: lv_value TYPE string.
+
+    DATA: ls_templates TYPE ts_template.
+
+    CLEAR mt_templates.
+
+    cl_gui_frontend_services=&gt;environment_get_variable(
+      EXPORTING
+        variable = &apos;APPDATA&apos;    &quot; Environment Variable Name
+      CHANGING
+        value    = lv_app_data_path    &quot; Variable Value
+    ).
+
+    cl_gui_cfw=&gt;flush( ).
+
+    CONCATENATE lv_app_data_path &apos;\SAP\SAP GUI\ABAP Editor\abap_user.xml&apos; INTO lv_app_data_path.
+
+    cl_gui_frontend_services=&gt;gui_upload(
+      EXPORTING
+        filename   = lv_app_data_path    &quot; Name of file
+        filetype   = &apos;BIN&apos;    &quot; File Type (ASCII, Binary)
+      IMPORTING
+        filelength = lv_raw_data_len    &quot; File Length
+      CHANGING
+        data_tab   = lt_raw_data    &quot; Transfer table for file contents
+    ).
+
+    lo_ixml = cl_ixml=&gt;create( ).
+
+    lo_streamfactory = lo_ixml-&gt;create_stream_factory( ).
+    lo_istream = lo_streamfactory-&gt;create_istream_itable( size  = lv_raw_data_len
+                                                          table = lt_raw_data ).
+
+    lo_document = lo_ixml-&gt;create_document( ).
+    lo_parser = lo_ixml-&gt;create_parser( stream_factory = lo_streamfactory
+                                        istream        = lo_istream
+                                        document       = lo_document ).
+
+    IF   lo_parser-&gt;parse( ) NE 0
+      OR lo_parser-&gt;num_errors( ) NE 0.
+
+*     *-- Close the Input Stream after Parsing
+      lo_istream-&gt;close( ).
+
+      MESSAGE &apos;XML file is not valid&apos; TYPE &apos;E&apos;.
+
+    ENDIF.
+
+*   *-- Close the Input Stream after Parsing
+    lo_istream-&gt;close( ).
+
+    CHECK lo_parser-&gt;is_dom_generating( ) EQ &apos;X&apos;.
+
+    lo_node = lo_document-&gt;find_from_name( name = &apos;EXPANDS&apos; ).
+
+    CHECK lo_node IS BOUND.
+
+    IF iv_mode = &apos;READ&apos; OR iv_mode = &apos;CHANGE&apos; OR iv_mode = &apos;DELETE&apos; .
+
+      lo_iterator = lo_node-&gt;create_iterator( ).
+      lo_node = lo_iterator-&gt;get_next( ).
+
+      WHILE lo_node IS BOUND.
+        CASE lo_node-&gt;get_type( ).
+          WHEN if_ixml_node=&gt;co_node_element.
+            lv_name  = lo_node-&gt;get_name( ).
+
+            IF lv_name = &apos;Expand&apos;.
+              lo_nodemap = lo_node-&gt;get_attributes( ).
+              IF lo_nodemap IS BOUND.
+                ls_templates-key = lo_nodemap-&gt;get_named_item( &apos;key&apos; )-&gt;get_value( ).
+              ENDIF.
+
+              IF iv_mode = &apos;DELETE&apos; AND ls_templates-key = is_template-key.
+                lo_node-&gt;remove_node( ).
+              ENDIF.
+
+            ENDIF.
+
+          WHEN if_ixml_node=&gt;co_node_text OR
+               if_ixml_node=&gt;co_node_cdata_section.
+            lv_value = lo_node-&gt;get_value( ).
+
+            IF lv_name = &apos;Descr&apos;.
+
+              IF iv_mode = &apos;CHANGE&apos; AND ls_templates-key = is_template-key.
+                lv_value = is_template-description.
+
+                lo_node-&gt;set_value( lv_value ).
+              ENDIF.
+
+              ls_templates-description = lv_value.
+
+            ENDIF.
+
+            IF lv_name = &apos;Text&apos;.
+
+              IF iv_mode = &apos;CHANGE&apos; AND ls_templates-key = is_template-key.
+                lv_value = is_template-text.
+
+                lo_node-&gt;set_value( lv_value ).
+              ENDIF.
+
+              ls_templates-text = lv_value.
+
+              IF iv_mode = &apos;READ&apos;.
+                APPEND ls_templates TO mt_templates[].
+              ENDIF.
+
+            ENDIF.
+
+            IF iv_mode = &apos;DELETE&apos; AND ls_templates-key = is_template-key.
+              lo_node-&gt;remove_node( ).
+            ENDIF.
+
+        ENDCASE.
+        lo_node = lo_iterator-&gt;get_next( ).
+      ENDWHILE.
+
+    ELSEIF iv_mode = &apos;ADD&apos;.
+
+      lo_child = lo_node-&gt;get_first_child( ).
+      lo_cloned_node = lo_child-&gt;clone( ).
+
+      lo_iterator = lo_cloned_node-&gt;create_iterator( ).
+      lo_child = lo_iterator-&gt;get_next( ).
+
+      WHILE lo_child IS BOUND.
+        CASE lo_child-&gt;get_type( ).
+          WHEN if_ixml_node=&gt;co_node_element.
+            lv_name  = lo_child-&gt;get_name( ).
+
+            IF lv_name = &apos;Expand&apos;.
+
+              lo_nodemap = lo_child-&gt;get_attributes( ).
+              IF lo_nodemap IS BOUND.
+                lo_nodemap-&gt;get_named_item( &apos;key&apos; )-&gt;set_value( is_template-key ).
+              ENDIF.
+
+            ENDIF.
+
+          WHEN if_ixml_node=&gt;co_node_text OR
+               if_ixml_node=&gt;co_node_cdata_section.
+
+            IF lv_name = &apos;Descr&apos;.
+              lo_child-&gt;set_value( is_template-description ).
+            ENDIF.
+
+            IF lv_name = &apos;Text&apos;.
+              lo_child-&gt;set_value( is_template-text ).
+            ENDIF.
+
+        ENDCASE.
+        lo_child = lo_iterator-&gt;get_next( ).
+      ENDWHILE.
+
+      lo_node-&gt;append_child( lo_cloned_node ).
+
+    ENDIF.
+
+    IF iv_mode = &apos;ADD&apos; OR iv_mode = &apos;CHANGE&apos; OR iv_mode = &apos;DELETE&apos;.
+
+      CLEAR lv_raw_data_x.
+      CLEAR lt_raw_data.
+
+      CALL FUNCTION &apos;SDIXML_DOM_TO_XML&apos;
+        EXPORTING
+          document      = lo_document
+          pretty_print  = &apos;X&apos;
+        IMPORTING
+          xml_as_string = lv_raw_data_x.
+
+      CALL FUNCTION &apos;SCMS_XSTRING_TO_BINARY&apos;
+        EXPORTING
+          buffer        = lv_raw_data_x
+        IMPORTING
+          output_length = lv_raw_data_len
+        TABLES
+          binary_tab    = lt_raw_data.
+
+      cl_gui_frontend_services=&gt;gui_download(
+        EXPORTING
+          bin_filesize = lv_raw_data_len    &quot; File length for binary files
+          filename     = lv_app_data_path    &quot; Name of file
+          filetype     = &apos;BIN&apos;    &quot; File type (ASCII, binary ...)
+        CHANGING
+          data_tab     = lt_raw_data    &quot; Transfer table
+      ).
+
+      CASE iv_mode.
+        WHEN &apos;ADD&apos;.
+          MESSAGE &apos;Template has been added successfully&apos; TYPE &apos;S&apos;.
+        WHEN &apos;CHANGE&apos;.
+          MESSAGE &apos;Template has been changed successfully&apos; TYPE &apos;S&apos;.
+        WHEN &apos;DELETE&apos;.
+          MESSAGE &apos;Template has been removed successfully&apos; TYPE &apos;S&apos;.
+      ENDCASE.
+
+    ENDIF.
+
+
+  ENDMETHOD.
+
+  METHOD load_data.
+
+    handle_xml_file( EXPORTING iv_mode = &apos;READ&apos; ).
+
+  ENDMETHOD.
+
+  METHOD user_command.
+
+    DATA lt_selected_rows TYPE salv_t_row.
+    DATA lv_selected_row  LIKE LINE OF lt_selected_rows.
+
+    CLEAR mv_screen_mode.
+    CLEAR ms_selected_template.
+
+    lt_selected_rows = mo_salv-&gt;get_selections( )-&gt;get_selected_rows( ).
+
+    CASE e_salv_function.
+      WHEN &apos;%DISP&apos; OR &apos;%CHNG&apos; OR &apos;%DEL&apos;.
+
+        IF lines( lt_selected_rows ) &lt;&gt; 1.
+          MESSAGE &apos;Select exactly one row&apos; TYPE &apos;S&apos; DISPLAY LIKE &apos;E&apos;.
+          RETURN.
+        ENDIF.
+
+        READ TABLE lt_selected_rows INTO lv_selected_row INDEX 1.
+        CHECK sy-subrc EQ 0.
+
+        READ TABLE mt_templates INTO ms_selected_template INDEX lv_selected_row.
+        CHECK sy-subrc EQ 0.
+
+    ENDCASE.
+
+    CASE e_salv_function.
+      WHEN &apos;%DISP&apos;.
+        mv_screen_mode = &apos;DISPLAY&apos;.
+
+        CALL SCREEN 0100.
+
+      WHEN &apos;%CHNG&apos;.
+        mv_screen_mode = &apos;CHANGE&apos;.
+
+        CALL SCREEN 0100.
+
+        me-&gt;load_data( ).
+        mo_salv-&gt;refresh( refresh_mode = if_salv_c_refresh=&gt;full ).
+
+      WHEN &apos;%ADD&apos;.
+        mv_screen_mode = &apos;ADD&apos;.
+
+        CALL SCREEN 0100.
+
+        me-&gt;load_data( ).
+        mo_salv-&gt;refresh( refresh_mode = if_salv_c_refresh=&gt;full ).
+
+      WHEN &apos;%DEL&apos;.
+
+        me-&gt;delete_template( EXPORTING iv_key   = ms_selected_template-key
+                                       iv_descr = ms_selected_template-description
+                                       iv_text  = ms_selected_template-text ).
+
+        me-&gt;load_data( ).
+        mo_salv-&gt;refresh( refresh_mode = if_salv_c_refresh=&gt;full ).
+
+      WHEN OTHERS.
+    ENDCASE.
+
+  ENDMETHOD.
+
+  METHOD status_0100.
+
+    DATA lt_fcode TYPE STANDARD TABLE OF syucomm.
+
+    cv_key = ms_selected_template-key.
+    cv_descr = ms_selected_template-description.
+
+    LOOP AT SCREEN.
+      CASE screen-group1.
+        WHEN &apos;001&apos;.
+          CASE mv_screen_mode.
+            WHEN &apos;DISPLAY&apos;.
+              screen-input = 0.
+            WHEN &apos;CHANGE&apos; OR &apos;ADD&apos;.
+              screen-input = 1.
+          ENDCASE.
+
+          MODIFY SCREEN.
+        WHEN &apos;002&apos;.
+          CASE mv_screen_mode.
+            WHEN &apos;DISPLAY&apos; OR &apos;CHANGE&apos;.
+              screen-input = 0.
+            WHEN &apos;ADD&apos;.
+              screen-input = 1.
+          ENDCASE.
+
+          MODIFY SCREEN.
+      ENDCASE.
+    ENDLOOP.
+
+    IF mv_screen_mode = &apos;DISPLAY&apos;.
+      APPEND &apos;%SAVE&apos; TO lt_fcode.
+    ENDIF.
+
+    IF mo_abap_editor IS NOT BOUND.
+
+      CREATE OBJECT mo_abap_container
+        EXPORTING
+          container_name = &apos;CONTAINER_TEXT&apos;.
+
+      CREATE OBJECT mo_abap_editor
+        EXPORTING
+          parent           = mo_abap_container    &quot; Parent container
+          max_number_chars = 150.    &quot; Maximum Number of Characters
+
+      DATA lt_text TYPE STANDARD TABLE OF text255.
+
+      SPLIT ms_selected_template-text AT &apos;\n&apos; INTO TABLE lt_text.
+
+      mo_abap_editor-&gt;set_text( lt_text ).
+    ENDIF.
+
+    CASE mv_screen_mode.
+      WHEN &apos;DISPLAY&apos;.
+*        mo_abap_editor-&gt;set_enable( &apos;&apos; ).
+        mo_abap_editor-&gt;set_readonly_mode( 1 ).
+      WHEN &apos;CHANGE&apos; OR &apos;ADD&apos;.
+*        mo_abap_editor-&gt;set_enable( &apos;X&apos; ).
+        mo_abap_editor-&gt;set_readonly_mode( 0 ).
+    ENDCASE.
+
+    SET PF-STATUS &apos;S0100&apos; EXCLUDING lt_fcode.
+    SET TITLEBAR &apos;T0100&apos;.
+
+  ENDMETHOD.
+
+  METHOD user_command_0100.
+    DATA lt_text         TYPE STANDARD TABLE OF text255.
+    DATA lv_text         TYPE string.
+
+    ms_selected_template-key = cv_key.
+    ms_selected_template-description = cv_descr.
+
+    CASE cv_ok_code.
+      WHEN &apos;E&apos; OR &apos;ECAN&apos;.
+        me-&gt;free_resources_0100( ).
+
+        SET SCREEN 0.
+        LEAVE SCREEN.
+      WHEN &apos;ENDE&apos;.
+        me-&gt;free_resources_0100( ).
+
+        LEAVE PROGRAM.
+      WHEN &apos;%SAVE&apos;.
+
+        IF cv_key IS INITIAL.
+          MESSAGE &apos;Template key cannot be empty&apos; TYPE &apos;S&apos; DISPLAY LIKE &apos;E&apos;.
+          RETURN.
+        ENDIF.
+
+        IF cv_descr IS INITIAL.
+          MESSAGE &apos;Template description cannot be empty&apos; TYPE &apos;S&apos; DISPLAY LIKE &apos;E&apos;.
+          RETURN.
+        ENDIF.
+
+        mo_abap_editor-&gt;get_text( IMPORTING table = lt_text ).
+        CONCATENATE LINES OF lt_text INTO lv_text SEPARATED BY &apos;\n&apos; RESPECTING BLANKS.
+        CONDENSE lv_text.
+
+        IF lv_text IS INITIAL.
+          MESSAGE &apos;Template text cannot be empty&apos; TYPE &apos;S&apos; DISPLAY LIKE &apos;E&apos;.
+          RETURN.
+        ENDIF.
+
+        CASE mv_screen_mode.
+          WHEN &apos;ADD&apos;.
+
+            me-&gt;add_template( EXPORTING iv_key   = cv_key
+                                        iv_descr = cv_descr
+                                        iv_text  = lv_text ).
+
+            me-&gt;free_resources_0100( ).
+
+            SET SCREEN 0.
+            LEAVE SCREEN.
+
+
+          WHEN &apos;CHANGE&apos;.
+
+            me-&gt;update_template( EXPORTING iv_key   = cv_key
+                                           iv_descr = cv_descr
+                                           iv_text  = lv_text ).
+
+          WHEN OTHERS.
+        ENDCASE.
+
+    ENDCASE.
+
+  ENDMETHOD.
+
+  METHOD add_template.
+
+    DATA ls_template TYPE ts_template.
+
+    ls_template-key = iv_key.
+    ls_template-description = iv_descr.
+    ls_template-text = iv_text.
+
+    me-&gt;handle_xml_file( EXPORTING iv_mode     = &apos;ADD&apos;
+                                   is_template = ls_template ).
+
+  ENDMETHOD.
+
+  METHOD update_template.
+
+    DATA ls_template TYPE ts_template.
+    DATA lv_answer TYPE char1.
+
+    CALL FUNCTION &apos;POPUP_TO_CONFIRM&apos;
+      EXPORTING
+        text_question = &apos;Are you sure you want to change this template?&apos;
+      IMPORTING
+        answer        = lv_answer.
+
+    CHECK lv_answer = &apos;1&apos;.
+
+    ls_template-key = iv_key.
+    ls_template-description = iv_descr.
+    ls_template-text = iv_text.
+
+    me-&gt;handle_xml_file( EXPORTING iv_mode     = &apos;CHANGE&apos;
+                                   is_template = ls_template ).
+
+  ENDMETHOD.
+
+  METHOD delete_template.
+
+    DATA ls_template TYPE ts_template.
+    DATA lv_answer TYPE char1.
+
+    CALL FUNCTION &apos;POPUP_TO_CONFIRM&apos;
+      EXPORTING
+        text_question = &apos;Are you sure you want to delete this template?&apos;
+      IMPORTING
+        answer        = lv_answer.
+
+    CHECK lv_answer = &apos;1&apos;.
+
+    ls_template-key = iv_key.
+    ls_template-description = iv_descr.
+    ls_template-text = iv_text.
+
+    me-&gt;handle_xml_file( EXPORTING iv_mode     = &apos;DELETE&apos;
+                                   is_template = ls_template ).
+
+  ENDMETHOD.
+
+  METHOD free_resources_0100.
+
+    mo_abap_editor-&gt;free( ).
+    mo_abap_container-&gt;free( ).
+
+    FREE mo_abap_editor.
+    FREE mo_abap_container.
+
+  ENDMETHOD.
+
+ENDCLASS.
+
+DATA go_report TYPE REF TO lcl_report.
+DATA gv_ok_code TYPE syucomm.
+
+DATA gv_key   TYPE string.
+DATA gv_descr TYPE string.
+
+START-OF-SELECTION.
+
+  CREATE OBJECT go_report.
+
+  go_report-&gt;start( ).
+
+*&amp;---------------------------------------------------------------------*
+*&amp;      Module  STATUS_0100  OUTPUT
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+MODULE status_0100 OUTPUT.
+
+  go_report-&gt;status_0100( CHANGING cv_key   = gv_key
+                                   cv_descr = gv_descr ).
+
+ENDMODULE.
+*&amp;---------------------------------------------------------------------*
+*&amp;      Module  USER_COMMAND_0100  INPUT
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+MODULE user_command_0100 INPUT.
+  go_report-&gt;user_command_0100( CHANGING cv_ok_code = gv_ok_code
+                                         cv_key     = gv_key
+                                         cv_descr   = gv_descr ).
+ENDMODULE.</source>
+ </PROG>
+</nugget>
